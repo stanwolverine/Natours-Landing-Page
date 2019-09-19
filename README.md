@@ -3,7 +3,7 @@
 This is a landing page for a virtual business called Natours which offers tour packages and other related services for famous places around the globe.
 
 ```
-Use server to open html file. There should be no need to run any npm command as css file is compressed and ready to use in html file.
+Use server to open html file. There should be no need to run any npm command as css file is already minified and ready to use in html file.
 ```
 
 ### This webpage is made with very **_Avanced HTML5 and CSS3_** techniques and properties.
@@ -12,7 +12,7 @@ Use server to open html file. There should be no need to run any npm command as 
 
 > It uses properties like **_transform: scale()_** and **_clip-path: polygon()_** to make modern skew sections.
 
-> It uses **_SCSS preprocessor_, **_BEM methodology_** to name classes and **_7 folders css structure_\*\*.
+> It uses **_SCSS preprocessor_**, **_BEM methodology_** to name classes and **_7 folders css structure_**.
 
 > It uses **_Animations_** using **_@keyframes_** and **_transition: all_** on buttons and other components of page.
 
@@ -20,7 +20,7 @@ Use server to open html file. There should be no need to run any npm command as 
 
 > It uses inbuilt css cards.
 
-> One section also has background Video which is made by using **_video_**_source_\*\* tags.
+> One section also has background Video which is made by using **_video_**, **_source_** tags.
 
 > Custom input styles and **_custom styled radio buttons_**.
 
