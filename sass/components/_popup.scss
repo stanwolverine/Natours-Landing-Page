@@ -1,0 +1,108 @@
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color-black, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+
+  opacity: 0; // 2nd video
+  visibility: hidden; // 2nd video
+  transition: all 0.3s; //2nd video
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
+  &__content {
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    overflow: hidden; //cause images inside this container will make border-radius not working.
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+
+    display: table;
+
+    // for animation
+    opacity: 0; //2nd video
+    // transform: scale(.5); merged with above transform
+    transition: all 0.4s 0.2s; //2nd video
+  }
+
+  &__left-side {
+    width: 33.33%;
+    // float: left; *works* *this has full height*
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__right-side {
+    width: 66.67%;
+    // float: left; *works* *this has height equal to content. hence, less height*
+    display: table-cell;
+    vertical-align: middle;
+
+    padding: 3rem 5rem;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    // something new
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+
+    // hyphens
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  &:target {
+    // 2nd video
+    opacity: 1; // 2nd video
+    visibility: visible; // 2nd video
+  }
+
+  &:target &__content {
+    //2nd video
+    opacity: 1; //2nd video
+    transform: translate(-50%, -50%) scale(1); // 2nd video
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
